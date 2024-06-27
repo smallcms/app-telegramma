@@ -1,5 +1,9 @@
 {{$NEXT}}
 
+0.15      2024-06-28 00:52:16+09:30 Australia/Adelaide
+
+  - Fix some strings to work with Telegram::Bot >= 0.025
+
 0.14      2019-06-28 14:34:49+09:30 Australia/Adelaide
 
   - Fix typo in --help output.

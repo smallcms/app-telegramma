@@ -120,10 +120,11 @@ sub reply_to {
   my $self  = shift;
   my $msg   = shift;
   my $reply = shift;
+  my $args  = shift || {};
 
   my $app = $self->app;
 
-  $app->send_message_to_chat_id($msg->chat->id, $reply);
+  $app->sendMessage({chat_id => $msg->chat->id, text=> $reply, %$args});
 }
 
 =method data_dir

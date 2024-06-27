@@ -113,13 +113,8 @@ sub bail_if_misconfigured {
 
 sub init {
   my $self = shift;
-
   # add a listener which will pass every message to each listen plugin
-  $self->add_listener(
-    sub { 1 },  # everything matches
-    \&incoming_message
-  );
-
+  $self->add_listener(\&incoming_message);
 }
 
 sub incoming_message {
